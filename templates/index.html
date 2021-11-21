@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous"
+        />
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/waltograph" type="text/css"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    </head>
+<body>
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="index.html">Home</a>
+        </nav>
+        <div class="jumbotron">
+            <h1 class="display-4">Disneyland Parks Around the World</h1>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Which park would be best to visit?</h3>
+                </div>
+                <div class= "col-md-8">
+                    <p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form action="/predict" method="POST">
+        <div class="dropdown">
+            <div class="row">
+                <div class = "col-md">
+                    <select name="month" id="month">
+                        <option value="">--When do you plan to visit Disneyland?--</option>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                </div>
+                <div class = "col-md">
+                    <select name="tourist_value" id="tourist">
+                        <option value="">--Are you a tourist?--</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class = "col-md">
+                    <select name="locations" id="location_encoded">
+                        <option value="">--Which country are you from?--</option>
+                        <option value="0">Australia</option>
+                        <option value="1">Canada</option>
+                        <option value="2">Hong Kong</option>
+                        <option value="3">India</option>
+                        <option value="4">Indonesia</option>
+                        <option value="5">Malaysia</option>
+                        <option value="6">New Zealand</option>
+                        <option value="8">Philippines</option>
+                        <option value="9">Singapore</option>
+                        <option value="10">United Kingdom</option>
+                        <option value="11">United States</option>
+                        <option value="7">Other</option>
+                    </select>
+                    </div>
+                <input type="submit">
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- <script src="app.js"></script> -->
+</body>
+</html>
