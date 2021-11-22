@@ -9,4 +9,4 @@ from sklearn.preprocessing import StandardScaler
 def predictions(month, tourist, location):
     loaded_model = pickle.load(open("disney_branch.pkl", 'rb'))
 
-    return loaded_model.predict([[12, month, 2010, tourist, location]])
+    return loaded_model.predict([[5, month, 2022, tourist, location]])
