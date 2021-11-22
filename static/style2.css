@@ -1,11 +1,11 @@
 body {
-    background-color:antiquewhite;
+    background-color:#3a85b8;
     color: #ffffff;
   }
 .jumbotron {
-    background-image: url("https://thumbs.dreamstime.com/b/cinderella-castle-magic-kingdom-park-walt-disney-world-resort-theme-bay-lake-florida-near-orlando-usa-117093809.jpg");
+    background-color:#2980B9;
     background-size: cover;
-    background-position: top;
+    background-position: center;
     text-align: center;
     font-family: 'WaltographRegular';
     font-weight: normal;
