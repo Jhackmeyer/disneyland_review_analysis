@@ -36,7 +36,8 @@ I upload the cleaned data to **pgAdmin** to have an easily accessible **postgres
 
 I use **Tableau** to visualize the patterns and trends in the data.
 
-I train a **balanced random forest classifier** machine learning model to predict which park one would most enjoy visiting.
+I train a **balanced random forest classifier** machine learning model to predict which park one would most enjoy visiting.  I needed 
+a multi-class classifier that could adjust for the imbalanced sizes of our samples.
 
 I use **Flask**, **html**, and **css** to allow easy interaction with this model.
 
@@ -74,3 +75,13 @@ Rating we assume to be 5 (we want our subject to have a good time), and the year
 So we are left with 3 inputs into our model:  Month, Tourist, and Location.
 
 ![home_page](Resources/ml_home_page.jpg)
+
+
+## <img src="https://user-images.githubusercontent.com/85424283/143308760-cbd1fb0a-1183-4329-9f46-0477ce681f4f.png" alt="Mickey ears" width="12">Next Steps<img src="https://user-images.githubusercontent.com/85424283/143308760-cbd1fb0a-1183-4329-9f46-0477ce681f4f.png" alt="Mickey ears" width="12">
+
+I would like to develop a working webscrape to:
+  * collect more up-to-date information on these parks
+  * add data from Disneyland Tokyo, Disney World, and Disney Shanghai
+  * add "city" as a parameter to our dataset, which we can use to improve our "tourist" metric.  
+
+More research should be done to optimize the machine learning model, as well.  I believe there is a neural network model which may be more useful and accurate for this multi-class classification, especially as the number of classes doubles with the number of parks in our dataset.  I'll need to do more research into a neural network with categorical cross entropy as loss and a softmax activation function.  (Note, this would likely require one-hot encoding-- turn park branch into binary variables across all rows.)
